@@ -232,6 +232,16 @@ LRESULT CALLBACK MainProc(HWND hwnd, UINT mas, WPARAM wp, LPARAM lp)
                 L"I", strlen("I"), NULL);
         }
 
+        if (window == wind->AllProjectsStatic)
+        {
+            SetBkMode(color, TRANSPARENT);
+        }
+
+        if (window == wind->AllProjectsPanel)
+        {
+            SetBkMode(color, TRANSPARENT);
+        }
+
         DrawEdge(color, &lpds->rcItem, 0, BF_SOFT);
         return TRUE;
     }
