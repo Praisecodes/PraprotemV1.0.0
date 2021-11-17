@@ -210,7 +210,7 @@ void App::ShowEditorSection(HWND hwnd)
 
 void App::CreateProjectsSection(HWND hwnd)
 {
-	int AllProjectsStaticX, AllProjectsStaticY;
+	int AllProjectsStaticX, AllProjectsStaticY = (18 * HEIGHT) / 100;
 	int AllProjectsPanelX, AllProjectsPanelY;
 
 	AllProjectsStatic = CreateWindowEx(0, L"STATIC", L"", WS_CHILD | WS_VISIBLE | SS_OWNERDRAW, AllProjectsStaticX, AllProjectsStaticY,
