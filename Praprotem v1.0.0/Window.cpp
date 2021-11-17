@@ -283,7 +283,19 @@ LRESULT CALLBACK MainProc(HWND hwnd, UINT mas, WPARAM wp, LPARAM lp)
 
             case ProjectsBtnPushed:
             {
-               
+                if (wind->EditorSectionActive == true)
+                {
+                    wind->DestroyEditorControls(wind->IconPanel, wind->Editor, wind->ProjectPanel, wind->NewFileBtn,
+                        wind->OpenFileBtn, wind->SaveFileBtn, wind->BoldFontBtn, wind->UnderlineFontBtn, wind->ItalizeFontBtn);
+                }
+                else {
+                    if (wind->HomeSectionActive == true) {
+                        wind->DestroyHomeControls(wind->MidProjectBtn, wind->MidEditorBtn, wind->MidLeaveBtn);
+                    }
+                }
+                wind->CreateProjectsSection(hwnd);
+                EnableWindow(wind->ProjectsBtn, FALSE);
+                EnableWindow(wind->EditorBtn, TRUE);
             }
             break;
             
@@ -301,6 +313,7 @@ LRESULT CALLBACK MainProc(HWND hwnd, UINT mas, WPARAM wp, LPARAM lp)
                 }
                 wind->CreateHomeSection(hwnd);
                 EnableWindow(wind->EditorBtn, TRUE);
+                EnableWindow(wind->ProjectsBtn, TRUE);
             }
             break;
 
@@ -371,8 +384,11 @@ LRESULT CALLBACK MainProc(HWND hwnd, UINT mas, WPARAM wp, LPARAM lp)
 
     default:
         return DefWindowProc(hwnd, mas, wp, lp);
-        if (wind->HomeSectionActive == true)
+        if (!(wind->HomeSectionActive == true))
         {
+            EnableWindow(wind->ReturnBtn, TRUE);
+        }
+        else {
             EnableWindow(wind->ReturnBtn, FALSE);
         }
         break;
