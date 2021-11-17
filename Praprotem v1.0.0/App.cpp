@@ -210,12 +210,12 @@ void App::ShowEditorSection(HWND hwnd)
 
 void App::CreateProjectsSection(HWND hwnd)
 {
-	int AllProjectsStaticX, AllProjectsStaticY = (18 * HEIGHT) / 100;
-	int AllProjectsPanelX, AllProjectsPanelY;
+	int AllProjectsStaticX = 0, AllProjectsStaticY = (18 * HEIGHT) / 100;
+	int AllProjectsPanelX = 0, AllProjectsPanelY = (26 * HEIGHT) / 100;
 
-	AllProjectsStatic = CreateWindowEx(0, L"STATIC", L"", WS_CHILD | WS_VISIBLE | SS_OWNERDRAW, AllProjectsStaticX, AllProjectsStaticY,
+	AllProjectsStatic = CreateWindowEx(0, L"STATIC", L"", WS_CHILD | WS_VISIBLE | WS_BORDER | SS_OWNERDRAW, AllProjectsStaticX, AllProjectsStaticY,
 		AllProjectsStaticWidth, AllProjectsStaticHeight, hwnd, NULL, (HINSTANCE)GetWindowLong(hwnd,GWLP_HINSTANCE), NULL);
 
-	AllProjectsPanel = CreateWindowEx(0, L"STATIC", L"", WS_CHILD | WS_VISIBLE | SS_OWNERDRAW, AllProjectsPanelX, AllProjectsPanelY,
+	AllProjectsPanel = CreateWindowEx(0, L"STATIC", L"", WS_CHILD | WS_VISIBLE | WS_BORDER | SS_OWNERDRAW, AllProjectsPanelX, AllProjectsPanelY,
 		AllProjectsPanelWidth, AllProjectsPanelHeight, hwnd, NULL, (HINSTANCE)GetWindowLong(hwnd,GWLP_HINSTANCE), NULL);
 }
