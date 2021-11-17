@@ -8,6 +8,7 @@ public:
 	virtual void BitmapCreate() override;
 	virtual void ShowEditorSection(HWND) override;
 	virtual void CreateHomeSection(HWND) override;
+	virtual void CreateProjectsSection(HWND) override;
 
 	//App class methods
 	void AppHeaderCreate(HWND);
