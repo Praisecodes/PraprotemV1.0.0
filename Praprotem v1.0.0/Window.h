@@ -65,6 +65,7 @@ public:
 	virtual void BitmapCreate() = 0;
 	virtual void ShowEditorSection(HWND) = 0;
 	virtual void CreateHomeSection(HWND) = 0;
+	virtual void CreateProjectsSection(HWND) = 0;
 
 	//Checking which part is open
 	bool EditorSectionActive = false, HomeSectionActive = false, ProjectSectionActive = false;
