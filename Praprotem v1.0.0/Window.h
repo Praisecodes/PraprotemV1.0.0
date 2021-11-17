@@ -21,6 +21,9 @@ public:
 		ReturnBtn, EditorBtn, ProjectsBtn, LeaveBtn, MidProjectBtn, MidEditorBtn, MidLeaveBtn, LogoLeftHand, LogoRightHand,
 		Logo, AboutBtn;
 
+	//Window Handlers for the Projects Section
+	HWND AllProjectsPanel, RelatedFilesPanel, AddBtn, DeleteBtn, AllProjectsStatic;
+
 	//Window Handlers for the Editor Section
 	HWND IconPanel, ProjectPanel, Editor, NewFileBtn, OpenFileBtn, SaveFileBtn, BoldFontBtn, UnderlineFontBtn,
 		ItalizeFontBtn;
@@ -50,6 +53,8 @@ public:
 	int CloseBtnHeight = MinimizeBtnHeight, CloseBtnWidth = CloseBtnHeight;
 	int AboutBtnHeight = (8 * HEIGHT) / 100, AboutBtnWidth = SideBtnsWidth;
 	int IconBtnsWidth = (5 * WIDTH) / 100, IconBtnsHeight = (8 * HEIGHT) / 100;
+	int AllProjectsStaticWidth, AllProjectsStaticHeight;
+	int AllProjectsPanelWidth, AllProjectsPanelHeight;
 
 	//Window Class methods
 	bool Create();
