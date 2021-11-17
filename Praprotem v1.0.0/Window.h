@@ -53,8 +53,8 @@ public:
 	int CloseBtnHeight = MinimizeBtnHeight, CloseBtnWidth = CloseBtnHeight;
 	int AboutBtnHeight = (8 * HEIGHT) / 100, AboutBtnWidth = SideBtnsWidth;
 	int IconBtnsWidth = (5 * WIDTH) / 100, IconBtnsHeight = (8 * HEIGHT) / 100;
-	int AllProjectsStaticWidth, AllProjectsStaticHeight;
-	int AllProjectsPanelWidth, AllProjectsPanelHeight;
+	int AllProjectsStaticWidth = (20 * WIDTH) / 100, AllProjectsStaticHeight = (8 * HEIGHT) / 100;
+	int AllProjectsPanelWidth = (20 * WIDTH) / 100, AllProjectsPanelHeight = (74 * HEIGHT)/100;
 
 	//Window Class methods
 	bool Create();
