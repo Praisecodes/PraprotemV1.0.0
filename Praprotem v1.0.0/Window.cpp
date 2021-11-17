@@ -283,7 +283,7 @@ LRESULT CALLBACK MainProc(HWND hwnd, UINT mas, WPARAM wp, LPARAM lp)
                 else {
                     if (wind->ProjectSectionActive == true)
                     {
-
+                        wind->DestroyProjectControls(wind->AllProjectsPanel, wind->AllProjectsStatic, NULL, NULL);
                     }
                 }
                 wind->ShowEditorSection(hwnd);
@@ -322,6 +322,7 @@ LRESULT CALLBACK MainProc(HWND hwnd, UINT mas, WPARAM wp, LPARAM lp)
                 else {
                     if (wind->ProjectSectionActive == true)
                     {
+                        wind->DestroyProjectControls(wind->AllProjectsPanel, wind->AllProjectsStatic, NULL, NULL);
                     }
                 }
                 wind->CreateHomeSection(hwnd);
@@ -463,6 +464,10 @@ void Window::DestroyHomeControls(HWND hwnd1, HWND hwnd2, HWND hwnd3)
 
 void Window::DestroyProjectControls(HWND hwnd1, HWND hwnd2, HWND hwnd3, HWND hwnd4)
 {
+    DestroyWindow(hwnd1);
+    DestroyWindow(hwnd2);
+    DestroyWindow(hwnd3);
+    DestroyWindow(hwnd4);
 }
 
 void Window::DestroyEditorControls(HWND hwnd1, HWND hwnd2, HWND hwnd3, HWND hwnd4,HWND hwnd5,HWND hwnd6,HWND hwnd7,
