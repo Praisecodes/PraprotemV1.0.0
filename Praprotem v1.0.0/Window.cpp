@@ -278,6 +278,8 @@ LRESULT CALLBACK MainProc(HWND hwnd, UINT mas, WPARAM wp, LPARAM lp)
                 }
                 wind->ShowEditorSection(hwnd);
                 EnableWindow(wind->EditorBtn, FALSE);
+                EnableWindow(wind->ReturnBtn, TRUE);
+                EnableWindow(wind->ProjectsBtn, TRUE);
             }
             break;
 
@@ -296,6 +298,7 @@ LRESULT CALLBACK MainProc(HWND hwnd, UINT mas, WPARAM wp, LPARAM lp)
                 wind->CreateProjectsSection(hwnd);
                 EnableWindow(wind->ProjectsBtn, FALSE);
                 EnableWindow(wind->EditorBtn, TRUE);
+                EnableWindow(wind->ReturnBtn, TRUE);
             }
             break;
             
@@ -312,6 +315,7 @@ LRESULT CALLBACK MainProc(HWND hwnd, UINT mas, WPARAM wp, LPARAM lp)
                     }
                 }
                 wind->CreateHomeSection(hwnd);
+                EnableWindow(wind->ReturnBtn, FALSE);
                 EnableWindow(wind->EditorBtn, TRUE);
                 EnableWindow(wind->ProjectsBtn, TRUE);
             }
@@ -384,13 +388,7 @@ LRESULT CALLBACK MainProc(HWND hwnd, UINT mas, WPARAM wp, LPARAM lp)
 
     default:
         return DefWindowProc(hwnd, mas, wp, lp);
-        if (!(wind->HomeSectionActive == true))
-        {
-            EnableWindow(wind->ReturnBtn, TRUE);
-        }
-        else {
-            EnableWindow(wind->ReturnBtn, FALSE);
-        }
+        ((wind->HomeSectionActive == true) ? EnableWindow(wind->ReturnBtn, FALSE) : EnableWindow(wind->ReturnBtn, TRUE));
         break;
     }
 
