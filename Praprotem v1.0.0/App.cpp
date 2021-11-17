@@ -210,6 +210,10 @@ void App::ShowEditorSection(HWND hwnd)
 
 void App::CreateProjectsSection(HWND hwnd)
 {
+	ProjectSectionActive = true;
+	EditorSectionActive = false;
+	HomeSectionActive = false;
+
 	int AllProjectsStaticX = 0, AllProjectsStaticY = (18 * HEIGHT) / 100;
 	int AllProjectsPanelX = 0, AllProjectsPanelY = (26 * HEIGHT) / 100;
 
