@@ -37,7 +37,7 @@ void App::AppHeaderCreate(HWND hwnd)
 	Header = CreateWindowEx(0, L"STATIC", L"", WS_CHILD | WS_VISIBLE | WS_BORDER | SS_OWNERDRAW, 0, 0, HeaderWidth,
 		HeaderHeight, hwnd, NULL, (HINSTANCE)GetWindowLong(hwnd, GWLP_HINSTANCE), NULL);
 
-	Icon = CreateWindowEx(0, L"STATIC", NULL, WS_CHILD | WS_VISIBLE | SS_BITMAP | WS_BORDER, 0, 0, IconWidth,
+	Icon = CreateWindowEx(0, L"STATIC", NULL, WS_CHILD | WS_VISIBLE | SS_BITMAP, 0, 0, IconWidth,
 		IconHeight, hwnd, NULL, (HINSTANCE)GetWindowLong(hwnd, GWLP_HINSTANCE), NULL);
 	SendMessage(Icon, STM_SETIMAGE, IMAGE_BITMAP, (LPARAM)icon_picture);
 
@@ -123,7 +123,7 @@ void App::CreateHomeSection(HWND hwnd)
 		DEFAULT_CHARSET, OUT_DEVICE_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH, TEXT("Palatino Linotype"));
 
 	MidProjectBtn = CreateWindowEx(0, L"BUTTON", L"PROJECTS", WS_CHILD | WS_VISIBLE | BS_OWNERDRAW | WS_BORDER, MidProjectBtnX,
-		MidProjectBtnY, MidBtnWidth, MidBtnHeight, hwnd, NULL, (HINSTANCE)GetWindowLong(hwnd, GWLP_HINSTANCE), NULL);
+		MidProjectBtnY, MidBtnWidth, MidBtnHeight, hwnd, (HMENU)ProjectsBtnPushed, (HINSTANCE)GetWindowLong(hwnd, GWLP_HINSTANCE), NULL);
 	SendMessage(MidProjectBtn, WM_SETFONT, (WPARAM)MidBtnFont, MAKELPARAM(TRUE, 0));
 
 	MidEditorBtn = CreateWindowEx(0, L"BUTTON", L"EDITOR", WS_CHILD | WS_VISIBLE | BS_OWNERDRAW | WS_BORDER, MidProjectBtnX,
@@ -206,4 +206,9 @@ void App::ShowEditorSection(HWND hwnd)
 	ItalizeFontBtn = CreateWindowEx(0, L"BUTTON", L"I", WS_CHILD | WS_VISIBLE | WS_BORDER | BS_OWNERDRAW,
 		ItalizeFontBtnX, IconBtnsY, IconBtnsWidth, IconBtnsHeight, hwnd, NULL, (HINSTANCE)GetWindowLong(hwnd, GWLP_HINSTANCE), NULL);
 	SendMessage(ItalizeFontBtn, WM_SETFONT, (WPARAM)ItalizeFontBtnFont, MAKELPARAM(TRUE, 0));
+}
+
+void App::CreateProjectsSection(HWND hwnd)
+{
+
 }
