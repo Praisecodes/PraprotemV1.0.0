@@ -216,6 +216,7 @@ void App::CreateProjectsSection(HWND hwnd)
 
 	int AllProjectsStaticX = 0, AllProjectsStaticY = (18 * HEIGHT) / 100;
 	int AllProjectsPanelX = 0, AllProjectsPanelY = (26 * HEIGHT) / 100;
+	int DeleteButtonX = 0, DeleteButtonY = (18 * HEIGHT) / 100;
 
 	AllProjectsStatic = CreateWindowEx(0, L"STATIC", L"", WS_CHILD | WS_VISIBLE | WS_BORDER | SS_OWNERDRAW, AllProjectsStaticX, AllProjectsStaticY,
 		AllProjectsStaticWidth, AllProjectsStaticHeight, hwnd, NULL, (HINSTANCE)GetWindowLong(hwnd,GWLP_HINSTANCE), NULL);
@@ -223,6 +224,6 @@ void App::CreateProjectsSection(HWND hwnd)
 	AllProjectsPanel = CreateWindowEx(0, L"STATIC", L"", WS_CHILD | WS_VISIBLE | WS_BORDER | SS_OWNERDRAW, AllProjectsPanelX, AllProjectsPanelY,
 		AllProjectsPanelWidth, AllProjectsPanelHeight, hwnd, NULL, (HINSTANCE)GetWindowLong(hwnd,GWLP_HINSTANCE), NULL);
 
-	DeleteButton = CreateWindowEx(0, L"BUTTON", L"+", WS_CHILD | WS_VISIBLE | BS_OWNERDRAW, 0, 0,
-		0, 0, hwnd, (HMENU)DeleteBtnPushed, (HINSTANCE)GetWindowLong(hwnd, GWLP_HINSTANCE), NULL);
+	DeleteButton = CreateWindowEx(0, L"BUTTON", L"+", WS_CHILD | WS_VISIBLE | WS_BORDER | BS_OWNERDRAW, DeleteButtonX, DeleteButtonY,
+		DeleteButtonWidth, DeleteButtonHeight, hwnd, (HMENU)DeleteBtnPushed, (HINSTANCE)GetWindowLong(hwnd, GWLP_HINSTANCE), NULL);
 }
