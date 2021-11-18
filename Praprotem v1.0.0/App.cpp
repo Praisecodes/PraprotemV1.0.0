@@ -222,4 +222,7 @@ void App::CreateProjectsSection(HWND hwnd)
 
 	AllProjectsPanel = CreateWindowEx(0, L"STATIC", L"", WS_CHILD | WS_VISIBLE | WS_BORDER | SS_OWNERDRAW, AllProjectsPanelX, AllProjectsPanelY,
 		AllProjectsPanelWidth, AllProjectsPanelHeight, hwnd, NULL, (HINSTANCE)GetWindowLong(hwnd,GWLP_HINSTANCE), NULL);
+
+	DeleteButton = CreateWindowEx(0, L"BUTTON", L"+", WS_CHILD | WS_VISIBLE | BS_OWNERDRAW, 0, 0,
+		0, 0, hwnd, (HMENU)DeleteBtnPushed, (HINSTANCE)GetWindowLong(hwnd, GWLP_HINSTANCE), NULL);
 }
