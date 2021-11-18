@@ -13,6 +13,8 @@ constexpr auto SaveFileBtnPushed = 9;
 constexpr auto BoldFontBtnPushed = 10;
 constexpr auto UnderlineFontBtnPushed = 11;
 constexpr auto ItalizeFontBtnPushed = 12;
+constexpr auto DeleteBtnPushed = 13;
+constexpr auto AddBtnPushed = 14;
 
 class Window
 {
@@ -22,7 +24,7 @@ public:
 		Logo, AboutBtn;
 
 	//Window Handlers for the Projects Section
-	HWND AllProjectsPanel, RelatedFilesPanel, AddBtn, DeleteBtn, AllProjectsStatic;
+	HWND AllProjectsPanel, RelatedFilesPanel, AddBtn, DeleteBtn, AllProjectsStatic, DeleteButton, AddButton;
 
 	//Window Handlers for the Editor Section
 	HWND IconPanel, ProjectPanel, Editor, NewFileBtn, OpenFileBtn, SaveFileBtn, BoldFontBtn, UnderlineFontBtn,
