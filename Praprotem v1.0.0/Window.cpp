@@ -242,6 +242,15 @@ LRESULT CALLBACK MainProc(HWND hwnd, UINT mas, WPARAM wp, LPARAM lp)
             SetBkMode(color, TRANSPARENT);
         }
 
+        if (window == wind->DeleteButton)
+        {
+            SetBkColor(color, RGB(60, 60, 60));
+            SetTextColor(color, RGB(255, 255, 255));
+
+            ExtTextOutA(color, (lpds->rcItem.left), (lpds->rcItem.top), ETO_CLIPPED | ETO_OPAQUE, &lpds->rcItem,
+                "+", strlen("+"), NULL);
+        }
+
         DrawEdge(color, &lpds->rcItem, 0, BF_SOFT);
         return TRUE;
     }
