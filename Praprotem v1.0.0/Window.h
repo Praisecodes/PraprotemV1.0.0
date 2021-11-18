@@ -24,7 +24,7 @@ public:
 		Logo, AboutBtn;
 
 	//Window Handlers for the Projects Section
-	HWND AllProjectsPanel, RelatedFilesPanel, AddBtn, DeleteBtn, AllProjectsStatic, DeleteButton, AddButton;
+	HWND AllProjectsPanel, RelatedFilesPanel, AllProjectsStatic, DeleteButton, AddButton;
 
 	//Window Handlers for the Editor Section
 	HWND IconPanel, ProjectPanel, Editor, NewFileBtn, OpenFileBtn, SaveFileBtn, BoldFontBtn, UnderlineFontBtn,
