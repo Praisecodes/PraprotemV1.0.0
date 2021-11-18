@@ -57,7 +57,7 @@ public:
 	int IconBtnsWidth = (5 * WIDTH) / 100, IconBtnsHeight = (8 * HEIGHT) / 100;
 	int AllProjectsStaticWidth = (20 * WIDTH) / 100, AllProjectsStaticHeight = (8 * HEIGHT) / 100;
 	int AllProjectsPanelWidth = (20 * WIDTH) / 100, AllProjectsPanelHeight = (74 * HEIGHT)/100;
-	int DeleteButtonHeight = (7 * HEIGHT) / 100, DeleteButtonWidth = (4 * WIDTH) / 100;
+	int DeleteButtonHeight = (6 * HEIGHT) / 100, DeleteButtonWidth = (4 * WIDTH) / 100;
 
 	//Window Class methods
 	bool Create();
