@@ -292,7 +292,7 @@ LRESULT CALLBACK MainProc(HWND hwnd, UINT mas, WPARAM wp, LPARAM lp)
                 else {
                     if (wind->ProjectSectionActive == true)
                     {
-                        wind->DestroyProjectControls(wind->AllProjectsPanel, wind->AllProjectsStatic, NULL, NULL);
+                        wind->DestroyProjectControls(wind->AllProjectsPanel, wind->AllProjectsStatic, wind->DeleteButton, NULL);
                     }
                 }
                 wind->ShowEditorSection(hwnd);
@@ -331,7 +331,7 @@ LRESULT CALLBACK MainProc(HWND hwnd, UINT mas, WPARAM wp, LPARAM lp)
                 else {
                     if (wind->ProjectSectionActive == true)
                     {
-                        wind->DestroyProjectControls(wind->AllProjectsPanel, wind->AllProjectsStatic, NULL, NULL);
+                        wind->DestroyProjectControls(wind->AllProjectsPanel, wind->AllProjectsStatic, wind->DeleteButton, NULL);
                     }
                 }
                 wind->CreateHomeSection(hwnd);
